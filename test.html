@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<!--#js-->
+<script type="text/javascript">
+    function methodTupe(){
+
+        if (document.getElementById('action').value=='add' ||
+            document.getElementById('action').value=='sub'){
+
+            document.getElementById('form').method = 'GET';
+            alert('GET')
+        }else {
+            document.getElementById('form').method = 'POST';
+            alert('POST')
+        }
+    }
+</script>
+
+
+<!--#form-->
+
+<form style="margin-top: 50px;margin-left: 100px; " id="form" method="GET" action="https://srulad.com/webiz.php" >
+    <input name="name" type="text" placeholder="Enter ur Name">
+    <br>
+    <br>
+    <input type="text" name="first" placeholder="Enter numb">
+    <select id="action" name="action">
+        <option id="1" value="add">მიმატება</option>
+        <option id="2" value="sub">გამოკლება</option>
+        <option id="3" value="mul">გამრავლება</option>
+        <option id="4" value="div">გაყოფა</option>
+    </select>
+    <input type="text" name="second" placeholder="Enter numb.">
+    <br>
+    <br>
+    <input style="color: red" type="reset" value="Clear">
+    <input style="color: #0df50d" onclick="methodTupe()" type="submit" value="GO!">
+</form>
+
+<!--img-->
+
+<img width="550px" height="450px" style="margin-left: 700px; margin-top: 1px" src="C:\Users\Maria\Desktop\calc.jpg">
+
+</body>
+</html>
